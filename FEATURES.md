@@ -30,3 +30,8 @@
 *Spend your money!*
 - Gambling
 - Auction House
+
+# Planned Features (WIP)
+- Questing System
+- Exploring (Different areas with different items & mobs, many locations to visit & explore)
+- Markets (Player ran markets & NPC markets)
