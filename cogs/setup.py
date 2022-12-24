@@ -30,6 +30,7 @@ quests = cluster['discord']['quest']
 misc = cluster['discord']['stats']
 
 server = cluster['discord']['server']
+pmarket = cluster['discord']['pmarket']
 
 class Setup(commands.Cog):
 
@@ -86,11 +87,17 @@ class Setup(commands.Cog):
                         'currentarea' : 'plains', 'currentlocation' : 'pond'
                     }
 
+                    pmarketSettings = {
+                        'id' : ctx.author.id,
+                        'name' : ctx.author
+                    }
+
                     general.insert_one(newuserGeneral)
                     skills.insert_one(newuserSkills)
                     collections.insert_one(newuserCollections)
                     recipes.insert_one(newuserRecipes)
                     areas.insert_one(newuserAreas)
+                    pmarket.insert_one(pmarketSettings)
 
                     server.update_one({'serverID' : 0}, {"$set":{'registeredusers': statsServer['registeredusers'] + 1}})
                     await ctx.send('Your profile has been sucessfully setup. Happy playing!')
