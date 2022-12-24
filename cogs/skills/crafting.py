@@ -1,6 +1,4 @@
 import string
-import random
-from tabnanny import check
 
 from discord.ext import commands
 from pymongo import MongoClient

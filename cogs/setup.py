@@ -50,7 +50,7 @@ class Setup(commands.Cog):
                         'axepower' : 1, 'pickpower' : 1, 'fishingrodpower' : 1,
                         'creation' : time.time(),
 
-                        'leaderboards' : [0, 0] #! Update with amount of LBs in game right now
+                        'leaderboards' : [0, 0] #! Update with amount of LBs in game right now // Make a global variable later
                     }
 
                     newuserSkills = {

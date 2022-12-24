@@ -4,7 +4,6 @@ from pymongo import MongoClient
 
 from json import loads
 from pathlib import Path
-import json
 
 #Retrieve tokens
 data = loads(Path("cogs/data/tokens.json").read_text())
