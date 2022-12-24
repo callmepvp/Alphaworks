@@ -1,0 +1,33 @@
+{
+    "goblin": 
+    {
+        "0" : "goblin ear",
+        "1" : "goblin gold"
+    },
+
+    "zombie":
+    {
+        "0" : "zombie flesh",
+        "1" : "zombie brain"
+    },
+
+    "skeleton":
+    {
+        "0" : "bone",
+        "1" : "crystal skull",
+        "2" : "archery potion"
+    },
+
+    "ogre":
+    {
+        "0" : "ogre thumb",
+        "1" : "ogre skin",
+        "2" : "health potion"
+    },
+
+    "ghost":
+    {
+        "0" : "sorrow",
+        "1" : "ectoplasm"
+    }
+} 

@@ -1,0 +1,17 @@
+{
+    "healthpotion": [
+        {
+            "0" : "zombie brain",
+            "1" : "blessed sunflower",
+            "2" : "mudwart",
+
+            "r0" : "3",
+            "r1" : "1",
+            "r2" : "1",
+
+            "d0" : "mobloot",
+            "d1" : "scavenging",
+            "d2" : "farming"
+        }
+    ]
+}

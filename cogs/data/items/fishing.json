@@ -1,0 +1,32 @@
+{
+    "F0": [
+        {
+            "0" : "coins"
+        }
+    ],
+
+    "F1": [
+        {
+            "0" : "seaweed",
+            "1" : "old boot",
+            "2" : "rubber duck"
+        }
+    ],
+
+    "F2": [
+        {
+            "0" : "cod",
+            "1" : "perch"
+        }
+    ],
+
+    "F3": [
+        {
+            "0" : "cod",
+            "1" : "perch",
+            "2" : "bass",
+            "3" : "starfish",
+            "4" : "mudcrab"
+        }
+    ]
+} 

@@ -1,0 +1,10 @@
+{
+    "wood" : {
+        "0" : "toolrod",
+        "1" : "copperaxe"
+    },
+    
+    "ore" : {
+        "0" : "copperpickaxe"
+    }
+}

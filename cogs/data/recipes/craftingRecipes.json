@@ -1,0 +1,14 @@
+{
+    "toolrod": [
+        {
+            "0" : "oak",
+            "1" : "silverleaf",
+
+            "r0" : "3",
+            "r1" : "1",
+
+            "d0" : "foraging",
+            "d1" : "scavenging"
+        }
+    ]
+}

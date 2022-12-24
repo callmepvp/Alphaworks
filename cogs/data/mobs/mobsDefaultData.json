@@ -1,0 +1,41 @@
+{
+    "goblin": 
+    {
+        "dmg" : "2",
+        "desc" : "A small, grotesque, monstrous creature.",
+        "added" : "Alpha 1.0",
+        "area" : "Plains"
+    },
+
+    "zombie":
+    {
+        "dmg" : "2",
+        "desc" : "An undead corporeal revenant, which has been reanimated.",
+        "added" : "Alpha 1.0",
+        "area" : "Plains"
+    },
+
+    "skeleton":
+    {
+        "dmg" : "4",
+        "desc" : "Only the rattling of their bones can be heard miles away.",
+        "added" : "Alpha 1.0",
+        "area" : "Plains"
+    },
+
+    "ogre":
+    {
+        "dmg" : "3",
+        "desc" : "Massive, ugly and smelly green lumps of meat.",
+        "added" : "Alpha 1.0",
+        "area" : "Plains"
+    },
+
+    "ghost":
+    {
+        "dmg" : "5",
+        "desc" : "Boo?",
+        "added" : "Alpha 1.0",
+        "area" : "Plains"
+    }
+} 
