@@ -164,7 +164,7 @@ class Leaderboard(commands.Cog):
 
                 counter += 1
 
-            await ctx.send("Leaderboard Updated Manually.")
+            await ctx.send("Leaderboards Updated Manually.")
         else:
             await ctx.send('You do not have a profile setup. Please do the setup command to make your profile!')
 

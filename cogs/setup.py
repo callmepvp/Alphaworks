@@ -89,7 +89,8 @@ class Setup(commands.Cog):
 
                     pmarketSettings = {
                         'id' : ctx.author.id,
-                        'name' : ctx.author
+                        'name' : ctx.author,
+                        'listings' : 0
                     }
 
                     general.insert_one(newuserGeneral)

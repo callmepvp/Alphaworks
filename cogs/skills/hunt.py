@@ -51,11 +51,8 @@ class Hunt(commands.Cog):
 
             #Choose the mob and drop
             mobType = random.choice(list(mobs))
-            print(mobType)
             lootType = random.choice(list(mobs[mobType].items()))
-            print(lootType)
             lootType = lootType[1]
-            print(lootType)
             lootAmount = random.randint(1, 2)
 
             #Get the stats

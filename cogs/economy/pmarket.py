@@ -69,8 +69,44 @@ class PMarket(commands.Cog):
                 #f!search ITEM_NAME
                 
                 if arg1 != None:
-                    for x in pmarket:
-                        pass
+                    message = []
+                    message.append(f"Searches for: `{arg1}`" "\n" "\n")
+
+                    #Find all matching listings
+                    resultsFound = 0
+                    orderNr = 1
+                    for x in pmarket.find():
+                        
+                        if len(x) > 4: #Ignore users with no listings
+                            listingAmount = x['listings']
+
+                            listingCounter = 1
+                            if orderNr < 10:
+                                for y in range(listingAmount):
+                                    if arg1 == x[f'listing{listingCounter}'][0]:
+
+                                        #Listing Data
+                                        sellerName = x['name']
+
+                                        sellAmount = x[f'listing{listingCounter}'][1]
+                                        sellPrice = x[f'listing{listingCounter}'][2]
+
+                                        #MESSAGE: 1. 5 x Oak for 2 Coins ea. > Seller: pvp#7272
+                                        message.append(f"**{orderNr}.** **{sellAmount}** x **{string.capwords(arg1)}** for **{sellPrice}** Coin ea." "\n" f"Seller: **{sellerName}**" "\n \n")
+                                        
+                                        resultsFound += 1
+                                        orderNr += 1
+                                    listingCounter += 1
+                            else:
+                                break
+
+                    if resultsFound != 0:
+                        await ctx.send(''.join(message))
+                    else:
+                        message.append('No results found!')
+                        await ctx.send(''.join(message))
+                else:
+                    await ctx.send("You're missing one or more arguments! **(f!pm search ITEM_NAME)**")
             
             #Selling
             elif action == 'sell':
@@ -103,41 +139,51 @@ class PMarket(commands.Cog):
                     
                     #Check if the user has enough items and valid items to sell
                     if counter != 0:
-                        if arg3 != None:
-                            arg3 = int(arg3)
+                        if arg2 != None:
+                            arg2 = int(arg2)
                         else:
-                            arg3 = 1 #Default amount to sell if no amount is given
+                            arg2 = 1 #Default amount to sell if no amount is given
 
-                        if arg3 > dataDir[arg1]:
+                        if arg2 > dataDir[arg1]:
                             Success = False
                             await ctx.send("You don't have enough items to sell.")
 
                         else:
                             Success = True
+                            #Check if a valid price was given
+                            if arg3 != None:
+                                arg3 = int(arg3)
+                            else:
+                                arg3 = 1 #Default price if no price was given
+
+                            #Check if listings are maxed
+                            listingsDir = pmarket.find_one({'id' : ctx.author.id})
+                            listingNr = int(listingsDir['listings'])
+                            if listingNr < 3:
+                                Success = True
+                            else:
+                                Success = False
+                                await ctx.send("You already have the maximum amount of listings! **(3)**")
+
                     elif counter == 0:
                         Success = False
                         await ctx.send("Invalid item or invalid amount.")
 
-                    #Check if a valid price was given
-                    if arg2 != None:
-                        arg2 = int(arg2)
-                    else:
-                        arg2 = 1 #Default price if no price was given
-
                     #Create the listing on the server
-                    #Max 1 Listing!
+                    #Max 3 Listings! > Save amount of listed items
                     #Hierarchy // 'listings' array > 'NAME' > 'AMOUNT' AND 'PRICE'
                     if Success:
 
                         #Remove the item from the inventory
-                        if dataDir[arg1] - arg3 != 0:
-                            stat.update_one({'id' : ctx.author.id}, {"$set":{arg1 : dataDir[arg1] - arg3}})
+                        if dataDir[arg1] - arg2 != 0:
+                            stat.update_one({'id' : ctx.author.id}, {"$set":{arg1 : dataDir[arg1] - arg2}})
                         else:
                             stat.update_one({'id' : ctx.author.id}, {'$unset' : {arg1 : ''}})
                         
                         #Create the listing array for the user
                         listing = [arg1, arg2, arg3]
-                        pmarket.update_one({'id' : ctx.author.id}, {"$set":{'listings' : listing}})
+                        pmarket.update_one({'id' : ctx.author.id}, {"$set":{f'listing{listingNr+1}' : listing}})
+                        pmarket.update_one({'id' : ctx.author.id}, {"$set":{'listings' : listingsDir['listings'] + 1}})
 
                         await ctx.send(f"You listed **{int(arg2)}** x **{string.capwords(arg1)}** for **{int(arg3)}** Coins!")
                 else:

@@ -15,6 +15,7 @@ class Settings(commands.Cog):
         #Language (Change the local language)
         #Trading (switch trading requests on or off)
         #Pmarket notifs (switch dm notifs on or off)
+        #Pmarket tag obfuscating (if you dont want your tag to be shown on pmarket searches)
         #LB notifs
 
         #Maybe -
