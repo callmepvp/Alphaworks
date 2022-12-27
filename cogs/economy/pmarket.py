@@ -70,6 +70,7 @@ class PMarket(commands.Cog):
                 
                 if arg1 != None:
                     message = []
+                    listings = []
                     message.append(f"Searches for: `{arg1}`" "\n" "\n")
 
                     #Find all matching listings
@@ -86,14 +87,17 @@ class PMarket(commands.Cog):
                                     if arg1 == x[f'listing{listingCounter}'][0]:
 
                                         #Listing Data
+                                        listing = []
                                         sellerName = x['name']
-
                                         sellAmount = x[f'listing{listingCounter}'][1]
                                         sellPrice = x[f'listing{listingCounter}'][2]
 
-                                        #MESSAGE: 1. 5 x Oak for 2 Coins ea. > Seller: pvp#7272
-                                        message.append(f"**{orderNr}.** **{sellAmount}** x **{string.capwords(arg1)}** for **{sellPrice}** Coin ea." "\n" f"Seller: **{sellerName}**" "\n \n")
-                                        
+                                        #Add the fetched listing data to an array as an array
+                                        listing.append(sellerName)
+                                        listing.append(sellAmount)
+                                        listing.append(sellPrice)
+                                        listings.append(listing)
+ 
                                         resultsFound += 1
                                         orderNr += 1
                                     listingCounter += 1
@@ -101,12 +105,20 @@ class PMarket(commands.Cog):
                                 break
 
                     if resultsFound != 0:
+                        #message.append(f"**{orderNr}.** **{sellAmount}** x **{string.capwords(arg1)}** for **{firstPrice}** Coin ea." "\n" f"Seller: **{sellerName}**" "\n \n")
+                        
+                        #Sort the array in order of growing prices (Lowest > Highest)
+                        print(listings)
                         await ctx.send(''.join(message))
                     else:
                         message.append('No results found!')
                         await ctx.send(''.join(message))
                 else:
                     await ctx.send("You're missing one or more arguments! **(f!pm search ITEM_NAME)**")
+            
+            #Buying
+            elif action == 'buy':
+                pass
             
             #Selling
             elif action == 'sell':
