@@ -76,7 +76,7 @@ class PMarket(commands.Cog):
                     #Find all matching listings
                     resultsFound = 0
                     orderNr = 1
-                    for x in pmarket.find():
+                    for x in pmarket.find(): #Iterate through all pmarket documents (Every User)
                         
                         if len(x) > 4: #Ignore users with no listings
                             listingAmount = x['listings']
@@ -105,19 +105,29 @@ class PMarket(commands.Cog):
                                 break
 
                     if resultsFound != 0:
-                        #message.append(f"**{orderNr}.** **{sellAmount}** x **{string.capwords(arg1)}** for **{firstPrice}** Coin ea." "\n" f"Seller: **{sellerName}**" "\n \n")
-                        
                         #Sort the array in order of growing prices (Lowest > Highest)
-                        print(listings)
-                        await ctx.send(''.join(message))
+                        listings.sort(key=lambda x: int(x[2]))
+
+                        #Form the final message
+                        if len(listings) > 10:
+                            loopAmount = 10
+                        else:
+                            loopAmount = len(listings)
+                        
+                        for j in range(loopAmount):
+                            message.append(f"**{j+1}.** **{listings[j][1]}** x **{string.capwords(arg1)}** for **{listings[j][2]}** Coin ea." "\n" f"Seller: **{listings[j][0]}**" "\n \n")
                     else:
                         message.append('No results found!')
-                        await ctx.send(''.join(message))
+
+                    await ctx.send(''.join(message))
                 else:
                     await ctx.send("You're missing one or more arguments! **(f!pm search ITEM_NAME)**")
             
             #Buying
             elif action == 'buy':
+                pass
+
+            elif action == 'quickbuy' or action == 'qb':
                 pass
             
             #Selling

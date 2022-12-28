@@ -1,55 +1,64 @@
 {
     "foraging":
-    {
+    {   
         "description": "The art of cutting down trees and vegetation, defenseless little vegetation. Don't you feel bad?",
-        "url": "cogs/data/images/foraging.png"
+        "url": "cogs/data/images/foraging.png",
+        "emoji" : ":axe:"
     },
 
     "mining":
     {
         "description": "Break your back and your hands slaving away at some rocks.",
-        "url": "cogs/data/images/foraging.png"
+        "url": "cogs/data/images/foraging.png",
+        "emoji" : ":pick:"
     },
 
     "fishing":
     {
-        "description": "Uncover the mysteries that the sea holds.",
-        "url": "cogs/data/images/foraging.png"
+        "description": "Uncover the mysteries of the sea.",
+        "url": "cogs/data/images/foraging.png",
+        "emoji" : ":fishing_pole_and_fish:"
     },
 
     "combat":
     {
         "description": "The art of cutting down not so defenseless vegetation (and monsters). Don't feel bad.",
-        "url": "cogs/data/images/foraging.png"
+        "url": "cogs/data/images/foraging.png",
+        "emoji" : ":crossed_swords:"
     },
 
     "scavenging":
     {
         "description": "Basically goblincore.",
-        "url": "cogs/data/images/foraging.png"
+        "url": "cogs/data/images/foraging.png",
+        "emoji" : ":seedling:"
     },
 
     "farming":
     {
         "description": "Probably the most relaxing activity there is.",
-        "url": "cogs/data/images/foraging.png"
+        "url": "cogs/data/images/foraging.png",
+        "emoji" : ":ear_of_rice:"
     },
 
     "brewing":
     {
-        "description": "Bring out your inner witchery. Harness the power of nature.",
-        "url": "cogs/data/images/foraging.png"
+        "description": "Bring out your inner witch. Harness the power of nature.",
+        "url": "cogs/data/images/foraging.png",
+        "emoji" : ":crystal_ball:"
     },
 
     "cooking":
     {
         "description": "Delightful. Not much else to it.",
-        "url": "cogs/data/images/foraging.png"
+        "url": "cogs/data/images/foraging.png",
+        "emoji" : ":meat_on_bone:"
     },
 
     "crafting":
-    {
+    {   
         "description": "Nothing in the world is made without combining a few sticks and stones together.",
-        "url": "cogs/data/images/foraging.png"
+        "url": "cogs/data/images/foraging.png",
+        "emoji" : ":hammer_pick:"
     }
 }

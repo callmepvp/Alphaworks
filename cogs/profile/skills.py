@@ -48,16 +48,41 @@ class Skills(commands.Cog):
 
             var = 0
             for x in pages:
+                descriptionValue = []
                 x.set_author(name = ctx.author, icon_url = ctx.author.avatar_url)
                 x.set_footer(text = random.choice(list(footers['en-en'].items()))[1])
-
+                
                 #Set the image and description of each embed
-                description = f"{list(skillsData[f'{skill[var]}'].items())[0][1]}"
-                url = f"{list(skillsData[f'{skill[var]}'].items())[1][1]}"
+                title = f"{list(skillsData[f'{skill[var]}'].items())[2][1]}"
+                description = f"{list(skillsData[f'{skill[var]}'].items())[0][1]}" "\n \n"
+                #url = {list(skillsData[f'{skill[var]}'].items())[1][1]} #! Isn't implemented yet
 
-                x.description = description
-                x.set_image(url = f'attachment://{url}')
+                x.title = f"{string.capwords(skill[var])} {title}"
+                descriptionValue.append(description)
+                #x.set_image(url = f'attachment://{url}') #! Doesn't work currently
 
+                #Make the skill bar for each skill
+                bar = []
+                if statsSkills[skill[var] + 'XP']/(50*statsSkills[skill[var] + 'Level'] + 10) == 0:
+                    for z in range(10):
+                        bar.append('□')
+                else:
+                    counter = 0
+                    for y in range(math.ceil((statsSkills[skill[var] + 'XP']/(50*statsSkills[skill[var] + 'Level'] + 10)) * 10)):
+                        bar.append('■')
+                        counter += 1
+
+                    for j in range(10-counter):
+                        bar.append('□')
+                
+                #Form the final description
+
+                #? Add leaderboard spots for every player for each skill (#x out of x)
+                bar = ''.join(bar)
+                descriptionValue.append(f"⇒ Level **{statsSkills[skill[var] + 'Level']}** | **{statsSkills[skill[var] + 'XP']}**/**{50*statsSkills[skill[var] + 'Level'] + 10}** XP" "\n")
+                descriptionValue.append(bar)
+
+                x.description = f"{''.join(descriptionValue)}"
                 var += 1
 
             #Paginator Settings
@@ -68,28 +93,6 @@ class Skills(commands.Cog):
             paginator.add_reaction('⏭️', "last")
 
             await paginator.run(pages)
-
-            """
-            for category in categories:
-                bar = []
-                if statsSkills[category + 'XP']/(50*statsSkills[category + 'Level'] + 10) == 0:
-                    for x in range(10):
-                        bar.append('□')
-                else:
-                    counter = 0
-                    for x in range(math.ceil((statsSkills[category + 'XP']/(50*statsSkills[category + 'Level'] + 10)) * 10)):
-                        bar.append('■')
-                        counter += 1
-
-                    for j in range(10-counter):
-                        bar.append('□')
-                
-                bar = ''.join(bar)
-                pos = categories.index(category)
-
-                text.append(f"⇒ **{string.capwords(category)}** Level **{statsSkills[category + 'Level']}** | **{statsSkills[category + 'XP']}**/**{50*statsSkills[category + 'Level'] + 10}** XP | {bar} | {descriptions[pos]}: **+{statsSkills[category + 'Attribute']}**" "\n")
-
-            await ctx.send(''.join(text))"""
 
         else:
             await ctx.send('You have not setup your profile yet. Please run the setup command.')
