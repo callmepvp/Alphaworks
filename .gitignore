@@ -22,3 +22,4 @@ cogs/skills/__pycache__/scavenging.cpython-39.pyc
 cogs/__pycache__/setup.cpython-39.pyc
 cogs/data/tokens.json
 cogs/economy/__pycache__/pmarket.cpython-39.pyc
+cogs/misc/__pycache__/server.cpython-39.pyc

@@ -33,12 +33,16 @@ farming = cluster['discord']['farming']
 def returnDir(y, digit):
     if y["d" + str(digit)] == 'foraging':
         dir = foraging
+    elif y["d" + str(digit)] == 'mining':
+        dir = mining
     elif y["d" + str(digit)] == 'scavenging':
         dir = scavenging
     elif y["d" + str(digit)] == 'mobloot':
         dir = mobloot
     elif y["d" + str(digit)] == 'farming':
         dir = farming
+    elif y["d" + str(digit)] == 'items':
+        dir = items
     
     return dir
     

@@ -125,6 +125,7 @@ class PMarket(commands.Cog):
             
             #Buying
             elif action == 'buy':
+                #f!pm buy ITEM_NAME LISTING_ORDER_NUMBER
                 pass
 
             elif action == 'quickbuy' or action == 'qb':

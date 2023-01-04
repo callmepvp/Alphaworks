@@ -94,17 +94,21 @@ class Forage(commands.Cog):
             collections.update_one({'id' : ctx.author.id}, {"$set":{'wood' : statsCollections['wood'] + woodAmount}})
             collections.update_one({'id' : ctx.author.id}, {"$set":{'woodtemp' : statsCollections['woodtemp'] + woodAmount}})
 
-            if statsCollections['woodtemp'] + woodAmount >= statsCollections['woodmilestone']*50 + 50 and statsCollections['woodmilestone'] >= 0:
+            if statsCollections['wood'] + woodAmount >= statsCollections['woodmilestone']*50 + 50 and statsCollections['woodmilestone'] >= 0:
                 collections.update_one({'id' : ctx.author.id}, {"$set":{'woodmilestone' : statsCollections['woodmilestone'] + 1}})
-                collections.update_one({'id' : ctx.author.id}, {"$set":{'woodtemp' : 0 + (statsCollections['woodtemp'] + woodAmount) - (statsCollections['woodmilestone']*50 + 50)}})
-                
+                #collections.update_one({'id' : ctx.author.id}, {"$set":{'woodtemp' : 0 + (statsCollections['woodtemp'] + woodAmount) - (statsCollections['woodmilestone']*50 + 50)}})
+                #! datapoint 'woodtemp' isn't needed at all (same for ores)
+
                 message = []
                 message.append('**[COLLECTION]** **Wood** Collection leveled up!')
 
                 #Give collection rewards
                 if statsCollections['woodmilestone'] + 1 == 1:
-                    message.append(' You unlocked the **Tool Rod** recipe. You unlocked the **Copper Axe** recipe.')
-                    recipes.update_one({'id' : ctx.author.id}, {"$set":{'toolrod' : True, 'copperaxe' : True}})
+                    message.append(' You unlocked the **Tool Rod** recipe. You unlocked the **Binding** recipe.')
+                    recipes.update_one({'id' : ctx.author.id}, {"$set":{'toolrod' : True, 'binding' : True}})
+                elif statsCollections['woodmilestone'] + 1 == 2:
+                    message.append(' You unlocked the **Copper Axe** recipe.')
+                    recipes.update_one({'id' : ctx.author.id}, {"$set":{'copperaxe' : True}})
                 
                 messageValue = ''.join(message)
                 await ctx.send(messageValue)

@@ -1,7 +1,8 @@
 {
     "wood" : {
         "0" : "toolrod",
-        "1" : "copperaxe"
+        "1" : "binding",
+        "2" : "copperaxe"
     },
     
     "ore" : {

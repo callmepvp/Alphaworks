@@ -10,5 +10,44 @@
             "d0" : "foraging",
             "d1" : "scavenging"
         }
+    ],
+
+    "binding": [
+        {
+            "0" : "spruce",
+            "1" : "iron", 
+
+            "r0" : "4",
+            "r1" : "1",
+
+            "d0" : "foraging",
+            "d1" : "mining"
+        }
+    ],
+
+    "copperaxe": [
+        {
+            "0" : "toolrod",
+            "1" : "binding",
+
+            "r0" : "3",
+            "r1" : "1",
+            
+            "d0" : "items",
+            "d1" : "items"
+        }
+    ],
+
+    "copperpickaxe": [
+        {
+            "0" : "toolrod",
+            "1" : "binding",
+
+            "r0" : "2",
+            "r1" : "1",
+
+            "d0" : "items",
+            "d1" : "items"
+        }
     ]
 }

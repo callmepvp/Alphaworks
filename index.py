@@ -1,4 +1,5 @@
 import discord
+from datetime import datetime
 import os
 from discord.ext import commands
 from discord.ext.commands.errors import BotMissingAnyRole, BotMissingPermissions
@@ -22,13 +23,13 @@ client = commands.Bot(command_prefix = prefix, intents=intents, help_command = N
 #Setup Connections
 try:
    cluster.admin.command('ismaster')
-   print('[*] Connected to the database.')
+   print('[INDEX] Connected to the MongoDB database succesfully!')
 except ConnectionFailure:
-   print('[*] Connection to the database has failed.')
+   print('[INDEX] Connection to the database has failed.')
 
 @client.listen()
 async def on_ready():
-    print('[*] Connected to discord as: {}'.format(client.user.name))
+    print(f'[INDEX @ {datetime.now().strftime("%H:%M:%S")}] Connected to discord as: {client.user.name}')
 
 #Cog Commands
 @client.command()

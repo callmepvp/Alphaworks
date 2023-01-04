@@ -1,3 +1,73 @@
 {
-    
+    "oak" : [
+        {
+            "description" : "One of the oldest woods on the planet. Useful in many crafting recipes. Not the best wood, but it won't let you down.",
+            "emoji" : ":wood:",
+            "location" : "Found by **Foraging** :axe: in most areas with **Axe Power** of at least **1**."
+        }
+    ],
+
+    "birch" : [
+        {
+            "description" : "",
+            "emoji" : ":wood:",
+            "location" : ""
+        }
+    ],
+
+    "spruce" : [
+        {
+            "description" : "",
+            "emoji" : ":wood:",
+            "location" : ""
+        }
+    ],
+
+    "maple" : [
+        {
+            "description" : "",
+            "emoji" : ":wood:",
+            "location" : ""
+        }
+    ],
+
+    "cedar" : [
+        {
+            "description" : "",
+            "emoji" : ":wood:",
+            "location" : ""
+        }
+    ],
+
+    "carrot" : [
+        {
+            "description" : "",
+            "emoji" : ":ear_of_rice:",
+            "location" : ""
+        }
+    ],
+
+    "potato" : [
+        {
+            "description" : "",
+            "emoji" : ":ear_of_rice:",
+            "location" : ""
+        }
+    ],
+
+    "wheat" : [
+        {
+            "description" : "",
+            "emoji" : ":ear_of_rice:",
+            "location" : ""
+        }
+    ],
+
+    "mudwart" : [
+        {
+            "description" : "",
+            "emoji" : ":ear_of_rice:",
+            "location" : ""
+        }
+    ]
 }

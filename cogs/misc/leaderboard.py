@@ -66,6 +66,7 @@ class Leaderboard(commands.Cog):
         else:
             await ctx.send('You do not have a profile setup. Please do the setup command to make your profile!')
 
+    #! Deprecated
     @commands.command()
     async def lbupdate(self, ctx):
         statsGeneral = general.find_one({'id' : ctx.author.id})

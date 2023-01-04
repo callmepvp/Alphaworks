@@ -95,9 +95,9 @@ class Mining(commands.Cog):
             collections.update_one({'id' : ctx.author.id}, {"$set":{'ore' : statsCollections['ore'] + mineAmount}})
             collections.update_one({'id' : ctx.author.id}, {"$set":{'oretemp' : statsCollections['oretemp'] + mineAmount}})
 
-            if statsCollections['oretemp'] + mineAmount >= statsCollections['oremilestone']*50 + 50 and statsCollections['oremilestone'] >= 0:
+            if statsCollections['ore'] + mineAmount >= statsCollections['oremilestone']*50 + 50 and statsCollections['oremilestone'] >= 0:
                 collections.update_one({'id' : ctx.author.id}, {"$set":{'oremilestone' : statsCollections['oremilestone'] + 1}})
-                collections.update_one({'id' : ctx.author.id}, {"$set":{'oretemp' : 0 + (statsCollections['oretemp'] + mineAmount) - (statsCollections['oremilestone']*50 + 50)}})
+                #collections.update_one({'id' : ctx.author.id}, {"$set":{'oretemp' : 0 + (statsCollections['oretemp'] + mineAmount) - (statsCollections['oremilestone']*50 + 50)}})
                 
                 message = []
                 message.append('**[COLLECTION]** **Ore** Collection leveled up!')
