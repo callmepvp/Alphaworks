@@ -108,7 +108,7 @@ class Forage(commands.Cog):
                     recipes.update_one({'id' : ctx.author.id}, {"$set":{'toolrod' : True, 'binding' : True}})
                 elif statsCollections['woodmilestone'] + 1 == 2:
                     message.append(' You unlocked the **Copper Axe** recipe.')
-                    recipes.update_one({'id' : ctx.author.id}, {"$set":{'copperaxe' : True}})
+                    recipes.update_one({'id' : ctx.author.id}, {"$set":{'copper axe' : True}})
                 
                 messageValue = ''.join(message)
                 await ctx.send(messageValue)

@@ -3,71 +3,249 @@
         {
             "description" : "One of the oldest woods on the planet. Useful in many crafting recipes. Not the best wood, but it won't let you down.",
             "emoji" : ":wood:",
-            "location" : "Found by **Foraging** :axe: in most areas with **Axe Power** of at least **1**."
+            "location" : "Found by **Foraging** :axe: in most areas with **Axe Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
         }
     ],
 
     "birch" : [
         {
-            "description" : "",
+            "description" : "Fragile, but a very gorgeous looking wood. Useful in recipes, where a more nimble wood is required.",
             "emoji" : ":wood:",
-            "location" : ""
+            "location" : "Found by **Foraging** :axe: in most areas with **Axe Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
         }
     ],
 
     "spruce" : [
         {
-            "description" : "",
+            "description" : "Strong and ancient wood that's accustomed to harsh climates. Very reliable wood.",
             "emoji" : ":wood:",
-            "location" : ""
+            "location" : "Found by **Foraging** :axe: in most areas with **Axe Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[UNCOMMON]**"
         }
     ],
 
     "maple" : [
         {
-            "description" : "",
+            "description" : "A beautiful looking tonewood that carries sound waves well and is useful in other miscellaneous recipes.",
             "emoji" : ":wood:",
-            "location" : ""
+            "location" : "Found by **Foraging** :axe: in most areas with **Axe Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
         }
     ],
 
     "cedar" : [
         {
-            "description" : "",
+            "description" : "Often used in rituals and as ornamental trees. Also useful in oils and other decorational elements.",
             "emoji" : ":wood:",
-            "location" : ""
+            "location" : "Found by **Foraging** :axe: in most areas with **Axe Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
         }
     ],
 
     "carrot" : [
         {
-            "description" : "",
-            "emoji" : ":ear_of_rice:",
-            "location" : ""
+            "description" : "A hardy, versatile root vegetable useful for a quick snack. Isn't too nutritious unless cooked with other ingredients.",
+            "emoji" : ":carrot:",
+            "location" : "Found by **Farming** :ear_of_rice: in most areas.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
         }
     ],
 
     "potato" : [
         {
-            "description" : "",
-            "emoji" : ":ear_of_rice:",
-            "location" : ""
+            "description" : "Probably the worst root vegetable to eat on its own. Too hard, too tasteless. Best when cooked with other ingredients.",
+            "emoji" : ":potato:",
+            "location" : "Found by **Farming** :ear_of_rice: in most areas.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
         }
     ],
 
     "wheat" : [
         {
-            "description" : "",
+            "description" : "Not edible. I don't know why you'd want to anyway. One of the most useful cooking ingredients.",
             "emoji" : ":ear_of_rice:",
-            "location" : ""
+            "location" : "Found by **Farming** :ear_of_rice: in most areas.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
         }
     ],
 
     "mudwart" : [
         {
-            "description" : "",
+            "description" : "A mysterious wart pulled out of the depths of muddy, swampy soil. Not edible on its own but amazingly useful in many crafing recipes for its healing properties.",
             "emoji" : ":ear_of_rice:",
-            "location" : ""
+            "location" : "Found by **Farming** :ear_of_rice: in most areas.",
+            "type" : "Raw Resource",
+            "rarity" : "**[UNCOMMON]**"
+        }
+    ],
+
+    "seaweed" : [
+        {
+            "description" : "A kinda creepy, slimy piece of weed in the sea. Despite being fairly useless, it's still used in some recipes. Can't call it trash afterall.",
+            "emoji" : ":herb:",
+            "location" : "Found by **Fishing** :fishing_pole_and_fish: in most areas with **Fishing Rod Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
+        }
+    ],
+
+    "old boot" : [
+        {
+            "description" : "Incredibly, supercalifragilisticexpialidociously useless.",
+            "emoji" : ":spider_web:",
+            "location" : "Found by **Fishing** :fishing_pole_and_fish: in most areas with **Fishing Rod Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[TRASH]**"
+        }
+    ],
+
+    "rubber duck" : [
+        {
+            "description" : "Incredibly, supercalifragilisticexpialidociously useless.",
+            "emoji" : ":spider_web:",
+            "location" : "Found by **Fishing** :fishing_pole_and_fish: in most areas with **Fishing Rod Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[TRASH]**"
+        }
+    ],
+
+    "cod" : [
+        {
+            "description" : "Common pond fish. Easy to catch, not too nutritious, but it's still food.",
+            "emoji" : ":fish:",
+            "location" : "Found by **Fishing** :fishing_pole_and_fish: in most areas with **Fishing Rod Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
+        }
+    ],
+
+    "perch" : [
+        {
+            "description" : "Common pond fish. Quite hard to catch, they put up a fight and aren't too nutritious on their own.",
+            "emoji" : ":fish:",
+            "location" : "Found by **Fishing** :fishing_pole_and_fish: in most areas with **Fishing Rod Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
+        }
+    ],
+
+    "bass" : [
+        {
+            "description" : "One of the most common fish on the planet. They're everywhere, they grow fast and they're tasty, when used in recipes.",
+            "emoji" : ":fish:",
+            "location" : "Found by **Fishing** :fishing_pole_and_fish: anywhere outside the pond with **Fishing Rod Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
+        }
+    ],
+
+    "starfish" : [
+        {
+            "description" : "Aren't very tasty on their own, might even cause side effects. Rarely used in food, but useful in other recipes.",
+            "emoji" : ":fish:",
+            "location" : "Found by **Fishing** :fishing_pole_and_fish: anywhere outside the pond with **Fishing Rod Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[UNCOMMON]**"
+        }
+    ],
+
+    "mudcrab" : [
+        {
+            "description" : "A very territorial and tough crab, who often conceal themselves in surrounding mud. They pinch hard and are impossible to catch, but nonetheless make an excellent meal.",
+            "emoji" : ":crab:",
+            "location" : "Found by **Fishing** :fishing_pole_and_fish: anywhere outside the pond with **Fishing Rod Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[UNCOMMON]**"
+        }
+    ],
+
+    "coal" : [
+        {
+            "description" : "One of the most common, but extremely useful part of most tools and smelting recipes. Good for keeping a fire burning.",
+            "emoji" : ":gem:",
+            "location" : "Found by **Mining** :pick: in most areas with **Pickaxe Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
+        }
+    ],
+
+    "copper" : [
+        {
+            "description" : "A medium, fairly tough ingot to harvest even tougher materials. Useful in making copper equipment.",
+            "emoji" : ":gem:",
+            "location" : "Found by **Mining** :pick: in most areas with **Pickaxe Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
+        }
+    ],
+
+    "iron" : [
+        {
+            "description" : "A sturdy and fairly affordable metal useful in making iron equipment and used in many other recipes that require a sturdier metal.",
+            "emoji" : ":gem:",
+            "location" : "Found by **Mining** :pick: in most areas with **Pickaxe Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
+        }
+    ],
+
+    "ruby" : [
+        {
+            "description" : "An extremely valuable gem. Not so useful in making equipment as it is fairly fragile. Hauntingly beautiful to look at.",
+            "emoji" : ":gem:",
+            "location" : "Found by **Mining** :pick: in most areas with **Pickaxe Power** of at least **1**.",
+            "type" : "Raw Resource",
+            "rarity" : "**[UNCOMMON]**"
+        }
+    ],
+
+    "blessed sunflower" : [
+        {
+            "description" : "A blessed flower with unknown magical capabilities. Often used in rituals and healing potions.",
+            "emoji" : ":mushroom:",
+            "location" : "Found by **Scavenging** :seedling: in most areas.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
+        }
+    ],
+
+    "silverleaf" : [
+        {
+            "description" : "Very useful for binding and merging multiple elements into one. Almost like a glue.",
+            "emoji" : ":mushroom:",
+            "location" : "Found by **Scavenging** :seedling: in most areas.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
+        }
+    ],
+
+    "bloodnettle" : [
+        {
+            "description" : "Unknown...",
+            "emoji" : ":mushroom:",
+            "location" : "Found by **Scavenging** :seedling: in most areas.",
+            "type" : "Raw Resource",
+            "rarity" : "**[COMMON]**"
+        }
+    ],
+
+    "crownflower" : [
+        {
+            "description" : "Unknown...",
+            "emoji" : ":mushroom:",
+            "location" : "Found by **Scavenging** :seedling: in most areas.",
+            "type" : "Raw Resource",
+            "rarity" : "**[UNCOMMON]**"
         }
     ]
 }

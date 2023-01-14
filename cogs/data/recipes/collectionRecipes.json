@@ -2,10 +2,10 @@
     "wood" : {
         "0" : "toolrod",
         "1" : "binding",
-        "2" : "copperaxe"
+        "2" : "copper axe"
     },
     
     "ore" : {
-        "0" : "copperpickaxe"
+        "0" : "copper pickaxe"
     }
 }

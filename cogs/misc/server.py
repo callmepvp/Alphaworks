@@ -1,6 +1,5 @@
 #Server File
 #Handles all server-sided data management and/or other calls - anything server related put here
-#! Not operational
 
 import string
 
@@ -10,7 +9,7 @@ from pymongo import MongoClient
 from json import loads
 from pathlib import Path
 
-totalItems = 9 #Update this with the amount of items in the game
+totalItems = 25 #Update this with the amount of items in the game
 #* This is hard-coded in so there's something to check against in case the bot doesn't load all items correctly
 
 #Retrieve tokens

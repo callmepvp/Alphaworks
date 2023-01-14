@@ -79,7 +79,7 @@ class Setup(commands.Cog):
                     
                     newuserRecipes = {
                         'id' : ctx.author.id,
-                        'healthpotion' : True, 'bread' : True
+                        'health potion' : True, 'bread' : True
                     }
 
                     newuserAreas = {

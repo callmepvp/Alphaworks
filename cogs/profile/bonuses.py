@@ -22,8 +22,8 @@ class Bonuses(commands.Cog):
         self.client = client
 
     #Commands
-    @commands.command(aliases = ['bonus', 'buffs', 'debuffs'])
-    async def bonuses(self, ctx, bonus = None):
+    @commands.command(aliases = ['bonus', 'buffs', 'debuffs', 'buff', 'debuff'])
+    async def bonuses(self, ctx, *, bonus = None):
         statsGeneral = general.find_one({'id' : ctx.author.id})
         text = []
 
@@ -32,6 +32,7 @@ class Bonuses(commands.Cog):
 
             #If bonus wasn't given
             if bonus is None:
+                text.append("*f!bonus BONUS_NAME for specifics!*" "\n")
                 if statsBonuses is not None:
                     document = bonuses.find_one({'id' : ctx.author.id})
                     for res in document:

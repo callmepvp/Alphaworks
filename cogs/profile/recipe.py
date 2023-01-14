@@ -26,7 +26,7 @@ class Recipe(commands.Cog):
         self.client = client
 
     @commands.command(aliases = ['recipe', 'r'])
-    async def recipes(self, ctx, recipe = None):
+    async def recipes(self, ctx, *, recipe = None):
         statsGeneral = general.find_one({'id' : ctx.author.id})
         if statsGeneral is not None:
             text = []

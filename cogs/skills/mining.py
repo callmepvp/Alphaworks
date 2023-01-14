@@ -105,7 +105,7 @@ class Mining(commands.Cog):
                 #Give collection rewards
                 if statsCollections['oremilestone'] + 1 == 1:
                     message.append(' You unlocked the **Copper Pickaxe** recipe.')
-                    recipes.update_one({'id' : ctx.author.id}, {"$set":{'copperpickaxe' : True}})
+                    recipes.update_one({'id' : ctx.author.id}, {"$set":{'copper pickaxe' : True}})
                 
                 messageValue = ''.join(message)
                 await ctx.send(messageValue)

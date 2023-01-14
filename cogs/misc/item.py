@@ -12,7 +12,7 @@ class Item(commands.Cog):
         self.client = client
 
     @commands.command(aliases=['i'])
-    async def item(self, ctx, arg1 = None):
+    async def item(self, ctx, *, arg1 = None):
         #Usage: f!item > Shows usage and categories
         #f!item ITEM_NAME > Shows item info
         #f!item CATEGORY > Shows all items in that category (?)
@@ -30,14 +30,23 @@ class Item(commands.Cog):
                     desc = data[arg1][0]['description']
                     location = data[arg1][0]['location']
 
-                    message.append(f"**{string.capwords(arg1)}** {emoji}" "\n")
+                    itemType = data[arg1][0]['type']
+                    rarity = data[arg1][0]['rarity']
+
+                    message.append(f"Information about **{string.capwords(arg1)}** {emoji}" "\n")
+                    message.append(f"{rarity} {itemType}" "\n" "\n")
+
+                    message.append("⇒ *Description:*" "\n")
                     message.append(f"{desc}" "\n \n")
+
+                    message.append("⇒ *Acquiring:*" "\n")
                     message.append(f"{location}")
 
                     await ctx.send(''.join(message))
 
                     #? Add statistics for each item at the bottom
-                    #? Amount that has been foraged
+                    #? Amount that has been foraged/farmed etc
+                    #? Add amount of XP it gives, if its a forageable
                     
             if counter == 0:
                 await ctx.send("Item not found!")
